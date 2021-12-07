@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         VStack{
             
-            Text("What's \"power house\" of a cell")
+            Text("What's \"power house\" of a cell?")
                 .font(.title)
                 .bold()
                 .padding()
@@ -23,9 +23,20 @@ struct ContentView: View {
             })
             .buttonStyle(.bordered)
             
+            Text("\"Miochondria\"")
+                .font(.title)
+                .bold()
+                .padding()
+            
+            Button(action: {
+                print("Button was pressed")
+            }, label: {
+                Text("New question")
+            })
+            .buttonStyle(.bordered)
+            .padding()
+            
             Spacer()
-            
-            
             
         }
         .navigationTitle("Flash Cards")
@@ -34,6 +45,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        NavigationView {
         ContentView()
+        }
     }
 }

@@ -9,7 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-      
+        VStack{
+            
+            Text("What's \"power house\" of a cell")
+                .font(.title)
+                .bold()
+                .padding()
+            
+            Button(action: {
+                print("Button was pressed")
+            }, label: {
+                Text("Check")
+            })
+            .buttonStyle(.bordered)
+            
+            Spacer()
+            
+            
+            
+        }
+        .navigationTitle("Flash Cards")
     }
 }
 

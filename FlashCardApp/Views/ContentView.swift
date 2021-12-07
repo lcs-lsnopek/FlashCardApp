@@ -7,29 +7,35 @@
 
 import SwiftUI
 
+//MARK: Strored Proprotes
+
+var currentCard: Card = listOfCards.randomElement()!
+
+//MARK: Computed Proprotes
+
 struct ContentView: View {
     var body: some View {
         VStack{
-            
-            Text("What's \"power house\" of a cell?")
+            //output
+            Text(currentCard.question)
                 .font(.title)
                 .bold()
                 .padding()
-            
+            //imput
             Button(action: {
-                print("Button was pressed")
+                Text("cheack")
             }, label: {
                 Text("Check")
             })
             .buttonStyle(.bordered)
-            
-            Text("\"Miochondria\"")
+            //output
+            Text("\"\(currentCard.awnser)\"")
                 .font(.title)
                 .bold()
                 .padding()
-            
+            //imput
             Button(action: {
-                print("Button was pressed")
+                currentCard = listOfCards.randomElement()!
             }, label: {
                 Text("New question")
             })
